@@ -3,7 +3,7 @@
     "description": "Multilingual headless blog for Shopware",
     "version": "1.1.0",
     "type": "shopware-platform-plugin",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": ">=8.2",
         "ext-xmlwriter": "*",
