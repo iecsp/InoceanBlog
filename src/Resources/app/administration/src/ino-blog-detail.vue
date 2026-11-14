@@ -80,7 +80,7 @@
                                     :label="$t('ino-blog.excerpt')"
                                     :placeholder="entity.translated?.excerpt || ''"
                                 />
-                                <mt-text-editor class="ino-blog-wide"
+                                <mt-text-editor class="ino-blog-wide ino-blog-body-editor"
                                     :key="currentLanguage"
                                     :model-value="entity.content || entity.translated?.content || '<p></p>'"
                                     :label="$t('ino-blog.content')"
@@ -326,6 +326,7 @@ fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
     align-items: start;
 }
 .ino-blog-wide { grid-column: 1 / -1; }
+.ino-blog-body-editor { margin-block-end: 20px; }
 .ino-blog-preview { max-width: 780px; margin: auto; line-height: 1.65; overflow-wrap: anywhere; }
 .ino-blog-preview h2 { font-size: 2rem; line-height: 1.2; margin: 16px 0 8px; }
 .ino-blog-preview__byline { color: var(--color-text-secondary-default); margin-bottom: 16px; }

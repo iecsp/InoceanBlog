@@ -4,7 +4,7 @@
     "name": "_plugin-vue_export-helper"
   },
   "ino-blog-detail.vue.shopware-setup.vue": {
-    "file": "assets/ino-blog-detail.vue.shopware-setup-BhbQUvMn.js",
+    "file": "assets/ino-blog-detail.vue.shopware-setup-CJssLwnA.js",
     "name": "ino-blog-detail.vue.shopware-setup",
     "src": "ino-blog-detail.vue.shopware-setup.vue",
     "isDynamicEntry": true,
@@ -13,11 +13,11 @@
       "__plugin-vue_export-helper-C-360Fc5.js"
     ],
     "css": [
-      "assets/ino-blog-detail.vue-CBmv7JXe.css"
+      "assets/ino-blog-detail.vue-DrD9FUGQ.css"
     ]
   },
   "ino-blog-list.vue.shopware-setup.vue": {
-    "file": "assets/ino-blog-list.vue.shopware-setup-CKtbxBnt.js",
+    "file": "assets/ino-blog-list.vue.shopware-setup-DwL-pTcj.js",
     "name": "ino-blog-list.vue.shopware-setup",
     "src": "ino-blog-list.vue.shopware-setup.vue",
     "isDynamicEntry": true,
@@ -30,7 +30,7 @@
     ]
   },
   "main.js": {
-    "file": "assets/inocean-blog-Bfv9smll.js",
+    "file": "assets/inocean-blog-TgX-AY83.js",
     "name": "inocean-blog",
     "src": "main.js",
     "isEntry": true,
