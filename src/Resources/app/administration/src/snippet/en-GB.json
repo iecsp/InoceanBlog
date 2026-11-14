@@ -1,0 +1,58 @@
+{
+    "ino-blog": {
+        "blog": "Blog",
+        "posts": "Blog posts",
+        "categories": "Categories",
+        "newPost": "New post",
+        "newCategory": "New category",
+        "search": "Search",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {page} of {pages}",
+        "title": "Title",
+        "name": "Name",
+        "author": "Author",
+        "active": "Publish",
+        "publishedAt": "Publication date",
+        "position": "Sort order",
+        "draft": "Draft",
+        "scheduled": "Scheduled",
+        "published": "Published",
+        "details": "Details",
+        "back": "Back",
+        "save": "Save",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "deletePrompt": "Permanently delete this entry?",
+        "channel": "Headless sales channel",
+        "category": "Category",
+        "pinned": "Pin to top",
+        "indexable": "Allow indexing and feed inclusion",
+        "description": "Description",
+        "content": "Article body",
+        "excerpt": "Excerpt",
+        "cover": "Cover image",
+        "video": "Article video",
+        "insertImage": "Insert image",
+        "seo": "Search engine optimization",
+        "slug": "URL slug",
+        "metaTitle": "SEO title",
+        "metaDescription": "SEO description",
+        "loadError": "Could not load the blog entry.",
+        "saveError": "Could not save the entry.",
+        "deleteError": "Could not delete the entry.",
+        "saved": "Entry saved.",
+        "required": "Enter a title or name. Posts also require an author and a sales channel. Set the publication date before publishing.",
+        "preview": "Preview",
+        "close": "Close",
+        "tags": "Tags",
+        "previewError": "Could not load the article preview."
+    },
+    "sw-privileges": {
+        "permissions": {
+            "ino_blog": {
+                "label": "Blog"
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "inocean/blog",
+    "description": "Multilingual headless blog for Shopware",
+    "version": "1.1.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "ext-xmlwriter": "*",
+        "shopware/core": "~6.7.16 || ~6.8.0",
+        "shopware/administration": "~6.7.16 || ~6.8.0"
+    },
+    "autoload": {
+        "psr-4": { "Inocean\\Blog\\": "src/" }
+    },
+    "extra": {
+        "shopware-plugin-class": "Inocean\\Blog\\InoceanBlog",
+        "label": { "en-GB": "Inocean Blog", "zh-CN": "Inocean 博客", "zh-TW": "Inocean 部落格", "zh-HK": "Inocean 網誌" }
+    }
+}

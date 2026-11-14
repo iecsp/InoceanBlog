@@ -1,0 +1,1 @@
+function a(t,o="error",e=null){Shopware.Store.get("notification").createNotification({variant:o,title:"global.default."+o,message:e??t})}const c=(t,o)=>{const e=t.__vccOpts||t;for(const[n,r]of o)e[n]=r;return e};export{c as _,a as n};

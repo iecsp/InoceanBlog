@@ -1,0 +1,26 @@
+{
+  "base": "/bundles/inoceanblog/administration/",
+  "entryPoints": {
+    "inocean-blog": {
+      "css": [],
+      "dynamic": [
+        "/bundles/inoceanblog/administration/assets/ino-blog-list.vue.shopware-setup-CKtbxBnt.js",
+        "/bundles/inoceanblog/administration/assets/ino-blog-detail.vue.shopware-setup-BhbQUvMn.js"
+      ],
+      "js": [
+        "/bundles/inoceanblog/administration/assets/inocean-blog-Bfv9smll.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

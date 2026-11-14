@@ -1,0 +1,58 @@
+{
+    "ino-blog": {
+        "blog": "博客",
+        "posts": "博客文章",
+        "categories": "分类",
+        "newPost": "新建文章",
+        "newCategory": "新建分类",
+        "search": "搜索",
+        "previous": "上一页",
+        "next": "下一页",
+        "page": "第 {page} 页，共 {pages} 页",
+        "title": "标题",
+        "name": "名称",
+        "author": "作者",
+        "active": "发布",
+        "publishedAt": "发布时间",
+        "position": "排序",
+        "draft": "草稿",
+        "scheduled": "定时发布",
+        "published": "已发布",
+        "details": "基本信息",
+        "back": "返回",
+        "save": "保存",
+        "delete": "删除",
+        "cancel": "取消",
+        "deletePrompt": "永久删除此条目？",
+        "channel": "无头销售渠道",
+        "category": "分类",
+        "pinned": "置顶",
+        "indexable": "允许索引并加入订阅源",
+        "description": "描述",
+        "content": "文章正文",
+        "excerpt": "摘要",
+        "cover": "头图",
+        "video": "文章视频",
+        "insertImage": "插入图片",
+        "seo": "搜索引擎优化",
+        "slug": "URL 别名",
+        "metaTitle": "SEO 标题",
+        "metaDescription": "SEO 描述",
+        "loadError": "无法加载博客数据。",
+        "saveError": "无法保存条目。",
+        "deleteError": "无法删除条目。",
+        "saved": "已保存。",
+        "required": "请输入标题或名称。文章还需要填写作者和销售渠道。发布前请选择发布时间。",
+        "preview": "预览",
+        "close": "关闭",
+        "tags": "标签",
+        "previewError": "无法加载文章预览。"
+    },
+    "sw-privileges": {
+        "permissions": {
+            "ino_blog": {
+                "label": "博客"
+            }
+        }
+    }
+}

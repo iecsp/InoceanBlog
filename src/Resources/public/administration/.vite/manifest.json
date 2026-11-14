@@ -1,0 +1,42 @@
+{
+  "__plugin-vue_export-helper-C-360Fc5.js": {
+    "file": "assets/_plugin-vue_export-helper-C-360Fc5.js",
+    "name": "_plugin-vue_export-helper"
+  },
+  "ino-blog-detail.vue.shopware-setup.vue": {
+    "file": "assets/ino-blog-detail.vue.shopware-setup-BhbQUvMn.js",
+    "name": "ino-blog-detail.vue.shopware-setup",
+    "src": "ino-blog-detail.vue.shopware-setup.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "main.js",
+      "__plugin-vue_export-helper-C-360Fc5.js"
+    ],
+    "css": [
+      "assets/ino-blog-detail.vue-CBmv7JXe.css"
+    ]
+  },
+  "ino-blog-list.vue.shopware-setup.vue": {
+    "file": "assets/ino-blog-list.vue.shopware-setup-CKtbxBnt.js",
+    "name": "ino-blog-list.vue.shopware-setup",
+    "src": "ino-blog-list.vue.shopware-setup.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "main.js",
+      "__plugin-vue_export-helper-C-360Fc5.js"
+    ],
+    "css": [
+      "assets/ino-blog-list.vue-BaSknF_Z.css"
+    ]
+  },
+  "main.js": {
+    "file": "assets/inocean-blog-Bfv9smll.js",
+    "name": "inocean-blog",
+    "src": "main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "ino-blog-list.vue.shopware-setup.vue",
+      "ino-blog-detail.vue.shopware-setup.vue"
+    ]
+  }
+}
