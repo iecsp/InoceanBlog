@@ -2,6 +2,8 @@
 
 Shopware 6.7.16.0 的无头博客插件。Composer 包为 `inocean/blog`，数据库表为 `ino_blog_*`。后台入口为 **Content → Blog**，界面提供英文、简体中文及繁体中文（`zh-TW`、`zh-HK`）。
 
+想了解 Shopware 6 在餐饮场景中的应用？欢迎访问 [IECSP 官网 · iecsp.com](https://iecsp.com/)，了解基于 Shopware 6 的餐饮运营平台 inocean ROP。
+
 ## 安装与编辑
 
 在 Shopware 项目根目录运行：
