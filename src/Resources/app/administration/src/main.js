@@ -48,6 +48,22 @@ const route = (component, path, kind, privilege, detail = false) => ({
     },
 });
 
+Shopware.Application.addServiceProviderDecorator('searchTypeService', (searchTypeService) => {
+    for (const [entityName, section, snippet] of [
+        ['ino_blog_post', 'posts', 'searchPosts'],
+        ['ino_blog_category', 'categories', 'searchCategories'],
+    ]) {
+        searchTypeService.upsertType(entityName, {
+            entityName,
+            placeholderSnippet: 'ino-blog.' + snippet,
+            listingRoute: 'ino.blog.' + section,
+            hideOnGlobalSearchBar: true,
+        });
+    }
+
+    return searchTypeService;
+});
+
 Shopware.Module.register('ino-blog', {
     type: 'plugin',
     name: 'InoceanBlog',

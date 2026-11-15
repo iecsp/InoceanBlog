@@ -46,13 +46,30 @@
         "preview": "預覽",
         "close": "關閉",
         "tags": "標籤",
-        "previewError": "無法載入文章預覽。"
+        "previewError": "無法載入文章預覽。",
+        "searchPosts": "搜尋部落格文章",
+        "searchCategories": "搜尋分類",
+        "createdAt": "建立時間",
+        "status": "狀態",
+        "refresh": "重新整理",
+        "filters": "篩選",
+        "applyFilter": "套用",
+        "clearFilter": "清除篩選",
+        "edit": "編輯",
+        "view": "查看",
+        "noResults": "找不到結果"
     },
     "sw-privileges": {
         "permissions": {
             "ino_blog": {
                 "label": "部落格"
             }
+        }
+    },
+    "global": {
+        "entities": {
+            "ino_blog_post": "部落格文章",
+            "ino_blog_category": "分類"
         }
     }
 }

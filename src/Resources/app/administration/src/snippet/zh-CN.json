@@ -46,13 +46,30 @@
         "preview": "预览",
         "close": "关闭",
         "tags": "标签",
-        "previewError": "无法加载文章预览。"
+        "previewError": "无法加载文章预览。",
+        "searchPosts": "搜索博客文章",
+        "searchCategories": "搜索分类",
+        "createdAt": "创建时间",
+        "status": "状态",
+        "refresh": "刷新",
+        "filters": "筛选",
+        "applyFilter": "应用",
+        "clearFilter": "清除筛选",
+        "edit": "编辑",
+        "view": "查看",
+        "noResults": "没有找到结果"
     },
     "sw-privileges": {
         "permissions": {
             "ino_blog": {
                 "label": "博客"
             }
+        }
+    },
+    "global": {
+        "entities": {
+            "ino_blog_post": "博客文章",
+            "ino_blog_category": "分类"
         }
     }
 }

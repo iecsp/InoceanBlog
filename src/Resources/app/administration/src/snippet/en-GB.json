@@ -46,13 +46,30 @@
         "preview": "Preview",
         "close": "Close",
         "tags": "Tags",
-        "previewError": "Could not load the article preview."
+        "previewError": "Could not load the article preview.",
+        "searchPosts": "Search blog posts",
+        "searchCategories": "Search categories",
+        "createdAt": "Created at",
+        "status": "Status",
+        "refresh": "Refresh",
+        "filters": "Filters",
+        "applyFilter": "Apply",
+        "clearFilter": "Clear filter",
+        "edit": "Edit",
+        "view": "View",
+        "noResults": "No results found"
     },
     "sw-privileges": {
         "permissions": {
             "ino_blog": {
                 "label": "Blog"
             }
+        }
+    },
+    "global": {
+        "entities": {
+            "ino_blog_post": "Blog posts",
+            "ino_blog_category": "Categories"
         }
     }
 }
