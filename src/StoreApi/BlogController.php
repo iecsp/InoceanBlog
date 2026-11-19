@@ -31,6 +31,22 @@ final class BlogController
         return new JsonResponse($this->listing($request, $context, false));
     }
 
+    #[Route(path: '/store-api/ino-blog/resolve', name: 'store-api.ino-blog.post.resolve', methods: ['GET'])]
+    public function resolve(Request $request, SalesChannelContext $context): JsonResponse
+    {
+        $path = trim($request->query->getString('path'), '/');
+        if ($path === '' || strlen($path) > 2048) {
+            throw new NotFoundHttpException('Blog post not found.');
+        }
+
+        $id = $this->published->resolvePath($path, $context);
+        if ($id === null) {
+            throw new NotFoundHttpException('Blog post not found.');
+        }
+
+        return $this->post($id, $context);
+    }
+
     #[Route(path: '/store-api/ino-blog/posts/{postId}', name: BlogSeoRoute::NAME, requirements: ['postId' => self::ID], methods: ['GET'])]
     public function post(string $postId, SalesChannelContext $context): JsonResponse
     {

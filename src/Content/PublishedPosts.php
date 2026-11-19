@@ -62,6 +62,30 @@ final class PublishedPosts
         return $paths;
     }
 
+    public function resolvePath(string $path, SalesChannelContext $context): ?string
+    {
+        $encoded = implode('/', array_map('rawurlencode', explode('/', $path)));
+        $criteria = (new Criteria())->addFilter(
+            new EqualsAnyFilter('seoPathInfo', array_unique([$path, $encoded])),
+            new EqualsFilter('routeName', BlogSeoRoute::NAME),
+            new EqualsFilter('salesChannelId', $context->getSalesChannelId()),
+            new EqualsFilter('isDeleted', false),
+        );
+
+        $matches = $this->seoUrls->search($criteria, $context->getContext())->getEntities();
+        $ids = [];
+        foreach ($matches as $url) {
+            if ($url->getLanguageId() === $context->getLanguageId()) {
+                return $url->getForeignKey();
+            }
+            $ids[$url->getForeignKey()] = true;
+        }
+
+        // A language switch may carry the previous language's path. Resolve it
+        // only when it unambiguously identifies the same article in this channel.
+        return count($ids) === 1 ? array_key_first($ids) : null;
+    }
+
     public function domain(SalesChannelContext $context): ?string
     {
         $domains = $context->getSalesChannel()->getDomains();

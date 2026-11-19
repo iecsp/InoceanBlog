@@ -11,7 +11,9 @@ use Shopware\Core\System\SalesChannel\SalesChannelEntity;
 final class BlogSeoRoute implements EntitySeoUrlRouteInterface
 {
     public const NAME = 'store-api.ino-blog.post.detail';
-    public const TEMPLATE = 'blog/{{ inoBlogPost.translated.slug ?: inoBlogPost.translated.title|slice(0, 100) }}-{{ inoBlogPost.id }}';
+    public const LEGACY_TEMPLATE = 'blog/{{ inoBlogPost.translated.slug ?: inoBlogPost.translated.title|slice(0, 100) }}-{{ inoBlogPost.id }}';
+
+    public const TEMPLATE = 'blog/{% if inoBlogPost.translated.slug|trim %}{{ inoBlogPost.translated.slug|trim }}{% else %}{{ inoBlogPost.translated.title|slice(0, 100) }}-{{ inoBlogPost.id }}{% endif %}';
 
     public function __construct(private readonly PostDefinition $definition)
     {

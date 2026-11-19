@@ -95,7 +95,7 @@ final class Migration1794614400Blog extends MigrationStep
             SQL, [
             'entity' => PostDefinition::ENTITY_NAME,
             'route' => BlogSeoRoute::NAME,
-            'template' => BlogSeoRoute::TEMPLATE,
+            'template' => BlogSeoRoute::LEGACY_TEMPLATE,
             'created' => (new \DateTimeImmutable('now', new \DateTimeZone('UTC')))->format(Defaults::STORAGE_DATE_TIME_FORMAT),
         ]);
     }

@@ -27,6 +27,7 @@ bin/console cache:clear
 | --- | --- |
 | `/store-api/ino-blog/posts` | 分页摘要，置顶优先，其次按发布时间排序。支持 `page`、`limit`、`q` 和 `categoryId` |
 | `/store-api/ino-blog/posts/{postId}` | 文章详情，包括清理后的正文 HTML、纯文本、媒体、作者、发布时间、SEO 元数据 |
+| `/store-api/ino-blog/resolve?path=blog/your-slug` | 按当前渠道和语言解析文章 SEO 路径或旧别名，返回文章详情及当前 `seoPath` |
 | `/store-api/ino-blog/categories` | 该渠道下含已发布文章的分类。支持 `page`、`limit` |
 | `/store-api/ino-blog/index` | 提供给站内搜索或 AI 索引任务的分页全文，按发布时间排序，支持与文章列表相同的查询参数 |
 | `/store-api/ino-blog/feed.xml` | RSS 2.0，按发布时间排序，包含带 canonical URL 的可索引文章，支持与索引相同的查询参数 |
@@ -35,8 +36,8 @@ bin/console cache:clear
 
 ### SEO 与爬虫
 
-1. 为每种语言在 Shopware **Headless 销售渠道**配置 Nuxt 域名，并标记 **External storefront**。此标记是 Shopware 生成该渠道 SEO URL 和 sitemap 的前提。配置变更后运行 `bin/console dal:refresh:index --only=ino_blog_post.seo-url` 及 `bin/console sitemap:generate --salesChannelId=<ID>`。
-2. 用 Shopware 原生 `/store-api/seo-url` 按 `seoPathInfo` 查询访问路径。匹配 `routeName === 'store-api.ino-blog.post.detail'` 时，以 `foreignKey` 请求文章详情。详情返回 `canonicalUrl` 和 `seoPath`。旧地址与当前 canonical URL 不同时，Nuxt 可发出 301。默认 URL 使用译文别名或标题，并附加文章 ID，以避免同名文章冲突。若渠道尚无对应语言的外部域名，应准备处理空 canonical URL。
+1. 升级到 1.2 后运行 `bin/console dal:refresh:index --only=ino_blog_post.seo-url`，为现有文章重建路径。后台保存文章后会更新索引。即使未配置外部域名，Store API 也可返回相对 `seoPath`。如需绝对 `canonicalUrl`、RSS 和 Shopware sitemap，请为每种语言配置 Nuxt 域名并标记 **External storefront**。
+2. 前端优先使用 API 返回的 `seoPath`。默认模板使用后台按语言填写的 URL 别名，例 `blog/inocean-intelligent-marketing`。未填写别名时使用连字符分隔的标题，并附加文章 ID 以避免同名冲突。通过 `/ino-blog/resolve` 读取文章时，历史别名仍可解析，前端应对旧别名和旧 ID 路径返回 301 到当前 SEO URL。
 3. Nuxt 应服务端渲染可索引文章并输出 canonical、SEO 标题和描述。可用详情数据生成 Schema.org `BlogPosting`。在 Nuxt 域名下公开 Shopware 生成的 sitemap，代理 RSS 接口并在 HTML 中声明 feed 链接。由 Nuxt 服务端注入渠道与语言参数，便于爬虫和订阅工具访问。要构建 AI 检索索引，可遍历 `/index`，定期移除列表中已不存在的条目。
 
 Shopware 参考：[无头 SEO URL 解析](https://developer.shopware.com/frontends/frontends-recipes/context/url-resolving.html)、[原生无头 sitemap](https://developer.shopware.com/release-notes/6.7/6.7.15.0.html)。

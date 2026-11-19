@@ -25,7 +25,8 @@ return static function (ContainerConfigurator $config): void {
         ->arg('$repository', service('ino_blog_category.repository'))->tag('shopware.mcp.tool');
 
     $services->set(BlogSeoRoute::class)->tag('shopware.entity.seo_url.route');
-    $services->set(BlogSeoIndexer::class);
+    $services->set(BlogSeoIndexer::class)
+        ->arg('$salesChannels', service('sales_channel.repository'));
     $services->set(BlogSitemapProvider::class);
     $services->set(PublishedPosts::class)
         ->args([service('ino_blog_post.repository'), service('seo_url.repository')]);
